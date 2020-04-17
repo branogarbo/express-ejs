@@ -2,8 +2,8 @@
 let express = require('express');
 let session = require('express-session');
 let bodyParser = require('body-parser');
-let router = require('./routes.js'); // importing router file
 let path = require('path');
+let router = require('./routes.js'); // importing router file
 
 let app = express(); // creating express app
 let port = 3000;

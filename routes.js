@@ -84,7 +84,7 @@ router.get('/login', (req, res)=>{
    res.render('pages/form', {
       title: 'Log In',
       postRoute: '/login',
-      lnkmsg: `Don't have an account? <a href="/signup">sign up</a>`
+      linkmsg: `Don't have an account? <a href="/signup">sign up</a>`
    });
 });
 
@@ -92,7 +92,7 @@ router.get('/signup', (req,res)=>{
    res.render('pages/form', {
       title: 'Sign Up',
       postRoute: '/signup',
-      lnkmsg: `Already have an account? <a href="/login">log in</a>`
+      linkmsg: `Already have an account? <a href="/login">log in</a>`
    });
 });
 
