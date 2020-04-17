@@ -1,10 +1,12 @@
 let express = require('express');
-let router = express.Router(); // creating router object
-
 let MongoClient = require('mongodb').MongoClient;
-let dburl = "mongodb+srv://brian:XUW4gIGtueppNgVd@name-dump-titz9.mongodb.net/test?retryWrites=true&w=majority";
-
 let bcrypt = require('bcryptjs');
+let env = require('dotenv');
+let dburl = process.env.DB_URL;
+
+env.config();
+
+let router = express.Router(); // creating router object
 
 router.use((req,res,next)=>{
 	console.log(req.method,req.url);

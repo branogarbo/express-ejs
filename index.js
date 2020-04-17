@@ -3,10 +3,13 @@ let express = require('express');
 let session = require('express-session');
 let bodyParser = require('body-parser');
 let path = require('path');
-let router = require('./routes.js'); // importing router file
+let env = require('dotenv');
+let router = require('./routes/main.js'); // importing router file
+let port = process.env.PORT;
+
+env.config();
 
 let app = express(); // creating express app
-let port = 3000;
 
 // configuring middleware used by routes of the app
 app.use(session({
