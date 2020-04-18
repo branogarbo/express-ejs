@@ -101,7 +101,8 @@ router.get('/signup', (req,res)=>{
 router.get('/home', (req, res)=>{
 	if (req.session.loggedin) {
 		res.send(`Welcome back, ${req.session.username}!`);
-	} else {
+	} 
+	else {
 		res.send('Please login to view this page!');
 	}
 });

@@ -4,7 +4,7 @@ let session = require('express-session');
 let bodyParser = require('body-parser');
 let path = require('path');
 let env = require('dotenv');
-let router = require('./routes/main.js'); // importing router file
+let main = require('./routes/main.js'); // importing router file
 
 env.config();
 let port = process.env.PORT;
@@ -22,6 +22,6 @@ app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use('/',router); // router for handling all routes, if '/' was replaced with '/user', it would handle routes starting with '/user'
+app.use('/',main); // router for handling all routes, if '/' was replaced with '/user', it would handle routes starting with '/user'
 
 app.listen(port, console.log(`listening on port ${port}`));
