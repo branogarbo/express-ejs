@@ -5,9 +5,9 @@ let bodyParser = require('body-parser');
 let path = require('path');
 let env = require('dotenv');
 let router = require('./routes/main.js'); // importing router file
-let port = process.env.PORT;
 
 env.config();
+let port = process.env.PORT;
 
 let app = express(); // creating express app
 

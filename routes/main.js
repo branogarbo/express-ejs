@@ -2,9 +2,9 @@ let express = require('express');
 let MongoClient = require('mongodb').MongoClient;
 let bcrypt = require('bcryptjs');
 let env = require('dotenv');
-let dburl = process.env.DB_URL;
 
 env.config();
+let dburl = process.env.DB_URL;
 
 let router = express.Router(); // creating router object
 
